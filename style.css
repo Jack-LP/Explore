@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Average Sans", sans-serif;
+    color: white;
+    font-size: 26px;
+}
+
+body{
+    background: url(./images/treeBG.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #bdbdbd;
+}
+
+.main{
+    display: grid;
+    margin-top: 8%;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 100%;
+    justify-items: center;
+    row-gap: 4.5rem;
+}
+
+.titleSection{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90%, 10%;
+}
+
+.title{
+    font-size: 5.2rem;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(139, 141, 140));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clock{
+    justify-self: end;
+    color: rgba(255, 255, 255, .3);
+    margin-top: -20px;
+}
+
+.linkSection{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    column-gap: .5rem;
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.2);
+    width: 214px;
+    height: 365px;
+    border-radius: 37px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon{
+    width: 175px;
+    position: absolute;
+    margin-top: -90px;
+    align-self: flex-start;
+}
+
+.link{
+    font-size: 34px;
+    color: #bdbdbd;
+    transition-duration: .2s;
+}
+
+.link:hover{
+    color: white;
+}
+
+.topLink{
+    margin-top: 80px;
+}
+
+@media only screen and (max-width: 1070px){
+    .main{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .linkSection{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        column-gap: .5rem;
+        row-gap: 3rem;
+    }
+}
