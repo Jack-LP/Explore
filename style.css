@@ -35,12 +35,16 @@ a:visited{
 
 .titleSection{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 75% 25%;
     grid-template-rows: 90%, 10%;
+    grid-template-areas: 
+    "title title"
+    "countDown clock";
 }
 
 .title{
     font-size: 5.2rem;
+    grid-area: title;
     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(139, 141, 140));
     background-clip: text;
     -webkit-background-clip: text;
@@ -49,8 +53,15 @@ a:visited{
 
 .clock{
     justify-self: end;
-    color: rgba(255, 255, 255, .3);
-    margin-top: -20px;
+    grid-area: clock;
+    color: rgba(255, 255, 255, .7);
+    margin-top: -10px;
+}
+
+.countDown{
+    grid-area: countDown;
+    color: rgba(255, 255, 255, .7);
+    margin-top: -10px;
 }
 
 .linkSection{
